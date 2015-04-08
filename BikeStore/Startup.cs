@@ -22,6 +22,9 @@ namespace BikeStore
 
             WebApiConfig.Register(config);
             app.UseCors(CorsOptions.AllowAll);
+
+            ConfigureAuth(app);
+
             app.UseWebApi(config);
 
             // Make ./public the default root of the static files in our Web Application.
