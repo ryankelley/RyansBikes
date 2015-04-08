@@ -43,6 +43,8 @@ namespace BikeStore.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            AddUser(context);
         }
     }
 }
