@@ -31,7 +31,7 @@ namespace BikeStore
             app.UseFileServer(new FileServerOptions
             {
                 RequestPath = new PathString(string.Empty),
-                FileSystem = new PhysicalFileSystem("./public"),
+                FileSystem = new PhysicalFileSystem("../../WebUi/app"),
                 EnableDirectoryBrowsing = true,
             });
 

@@ -11,6 +11,9 @@ namespace BikeStore.Models
 
         /// <summary>
         /// Geographical regions for sales tracking purposes
+
+        public virtual DbSet<Product> Products { get; set; } 
+
         /// </summary>
         public virtual DbSet<Region> Regions { get; set; }
         /// <summary>

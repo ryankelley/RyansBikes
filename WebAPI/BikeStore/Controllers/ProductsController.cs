@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.EnterpriseServices;
 using System.Linq;
 using System.Web.Http;
 using BikeStore.Models;
@@ -8,21 +9,21 @@ namespace BikeStore.Controllers
 {
     public class ProductsController : ApiController
     {
-        Product[] products = new Product[]
+        private BikeContext db { get; set; }
+
+        public ProductsController()
         {
-            new Product() { Id = 1, Name = "Trek Superfly", Category = "Mountain Bike", Price=3000},
-            new Product() { Id = 2, Name = "Trek Marlin", Category = "Mountain Bike", Price=700},
-            new Product() { Id = 3, Name = "Yeti SB95C", Category = "Mountain Bike", Price=5000}
-        };
+            db = new BikeContext();
+        }
 
         public IEnumerable<Product> GetAllProducts()
         {
-            return products;
+           return db.Products.Take(100).ToList();
         }
 
         public IHttpActionResult GetProduct(int id)
         {
-            var product = products.FirstOrDefault(x => x.Id == id);
+            var product = db.Products.FirstOrDefault(x => x.Id == id);
             if (product == null)
             {
                 return NotFound();

@@ -155,6 +155,10 @@
     <Compile Include="Migrations\201504082101106_SalesData.Designer.cs">
       <DependentUpon>201504082101106_SalesData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504092300303_test.cs" />
+    <Compile Include="Migrations\201504092300303_test.Designer.cs">
+      <DependentUpon>201504092300303_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BikeContext.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -173,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504082101106_SalesData.resx">
       <DependentUpon>201504082101106_SalesData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504092300303_test.resx">
+      <DependentUpon>201504092300303_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
